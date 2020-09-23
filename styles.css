@@ -1,54 +1,117 @@
-body {
-  font-family: "Helvetica", "Arial", sans-serif;
-  font-weight: normal;
-  background-color: #cdc2cd;
-  color: white;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif
+}
+
+.page {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.section {
+  width: 100%;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo {
+  width: 100%;
+}
+
+.menu {
+  background-color: #5f7782;
+  height: 80px;
+  padding: 50px 0;
+}
+
+.menu-items{
+  color: #EDEAE7;
+  display: flex;
+}
+
+.button:link,
+.button:visited {
   display: block;
-  margin: 50px;
-}
+  text-decoration: none;
 
-h1, li {
-  text-shadow: 2px 2px 10px #000000;
-}
-
-h1 {
+  color: #EDEAE7;
+  background-color: #647782;
+  font-weight: bold;
+  padding: 20px;
   text-align: center;
+  border: 2px solid;
+  border-radius: 2px;
+
+  width: 200px;
+  margin: 20px;
+}
+
+.button:hover,
+.button:visited:hover {
+  background-color: #ADB7BD;
+}
+
+.header {
+  background-color: #d8b26e;
+  height: 500px;
+  padding: 30px 0;
+}
+
+.header:hover {
+  background-color: #e2cc9f;
 }
 
 .content {
-  margin: 25px;
-  padding: 20px;
-  background-color: white;
-  display: block;
-  color: #868784;
-  border-radius: 10px;
-  box-shadow: 10px 10px 7px #888888;
+  background-color: #dad5d2;
+  height: 500px;
 }
 
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: #ded3de;
-  border: 2px solid;
-  border-radius: 10px;
-  box-shadow: 10px 10px 7px #888888;
+.photo-grid-container {
+  display: flex;
+  justify-content: center;
 }
 
-li {
-  float: left;
+.photo-grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
 }
 
-li a {
-  font-style: oblique;
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
+.photo-grid-item {
+  border: 1px solid #fff;
+  width: 300px;
+  height: 300px;
 }
 
-li a:hover {
-  background-color: #b7b2b8;
+h1 {
+  color: #EDEAE7;
+}
+
+/* Mobile Styles */
+@media only screen and (max-width: 400px) {
+  body {
+    background-color: #dad5d2;
+  }
+}
+
+/* Desktop Styles */
+@media only screen and (min-width: 961px) {
+  .page {
+    width: 960px;
+    margin: 0 auto;
+  }
+
+  .header {
+    height: 400px;
+  }
+
+  .content{
+    order: 1;
+  }
 }
