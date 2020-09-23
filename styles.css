@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
 }
 
 .page {
@@ -104,8 +104,4 @@
   .content {
     order: 1;
   }
-
-  /* .personal-portrait img {
-    margin-left: 20px;
-  } */
 }
